@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球投注 · 快速识别网站用途 | Web Football Wager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #faf6f0;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            color: #2e2b27;
+            line-height: 1.7;
+            padding: 0 1rem;
+        }
+        .page {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fffcf7;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            min-height: 100vh;
+        }
+        /* 顶部导航 - 轻量 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid #ede6db;
+            background: #fdf9f3;
+            flex-wrap: wrap;
+        }
+        .top-nav .site-id {
+            font-weight: 500;
+            font-size: 1.05rem;
+            letter-spacing: 0.02em;
+            color: #5b4f43;
+        }
+        .top-nav .site-id span {
+            background: #e6ddd1;
+            padding: 0.1rem 0.5rem;
+            border-radius: 3px;
+            color: #3f352d;
+            margin-left: 0.15rem;
+        }
+        .top-nav .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            font-size: 0.95rem;
+        }
+        .top-nav .nav-links a {
+            text-decoration: none;
+            color: #4d4239;
+            padding: 0.2rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .top-nav .nav-links a:hover {
+            border-bottom-color: #b8a998;
+            color: #1e1b18;
+        }
+        /* hero 区 */
+        .hero {
+            padding: 3rem 2rem 2.5rem 2rem;
+            text-align: center;
+            background: #faf5ed;
+            border-bottom: 1px solid #e8dfd2;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: -0.01em;
+            color: #2d2822;
+            margin-bottom: 0.75rem;
+        }
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #5d5245;
+            max-width: 600px;
+            margin: 0 auto 1.2rem;
+        }
+        .hero .tagline {
+            display: inline-block;
+            background: #e8ddd0;
+            padding: 0.4rem 1.2rem;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            color: #3f362e;
+        }
+        /* 内容主体 */
+        .content {
+            padding: 2.2rem 2rem 3rem;
+        }
+        .intro-text {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            padding: 0.5rem 0;
+        }
+        .intro-text p {
+            margin-bottom: 1rem;
+        }
+        .intro-text a {
+            color: #7c6b58;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #cbbcaa;
+            font-weight: 500;
+        }
+        .intro-text a:hover {
+            color: #3e332b;
+            text-decoration-color: #7c6b58;
+        }
+        .highlight-box {
+            background: #f4eee4;
+            padding: 1.5rem 1.8rem;
+            border-left: 6px solid #b8a48b;
+            margin: 1.8rem 0 2.5rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.95rem;
+        }
+        .highlight-box strong {
+            color: #3a3028;
+        }
+        /* 三个场景模块 */
+        .scenes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0 2.5rem;
+        }
+        .scene-card {
+            flex: 1 1 220px;
+            background: #f9f3ea;
+            padding: 1.6rem 1.2rem;
+            border-radius: 12px;
+            border: 1px solid #e3d9cc;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .scene-card:hover {
+            background: #f4ece1;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+        .scene-card .emoji-marker {
+            display: block;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+        .scene-card h3 {
+            font-size: 1.1rem;
+            font-weight: 550;
+            margin-bottom: 0.4rem;
+            color: #3d342b;
+        }
+        .scene-card p {
+            font-size: 0.92rem;
+            color: #544b40;
+        }
+        /* 说明区块 */
+        .faq-summary {
+            margin-top: 2.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e6dbce;
+        }
+        .faq-summary h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: #3b332b;
+        }
+        .faq-item {
+            margin-bottom: 1rem;
+            padding: 0.6rem 0;
+        }
+        .faq-item .q {
+            font-weight: 500;
+            color: #3f362d;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .faq-item .a {
+            color: #5f5549;
+            padding-left: 0.6rem;
+            border-left: 3px solid #d6caba;
+            padding-left: 1rem;
+        }
+        .faq-item .a a {
+            color: #7c6b58;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .faq-item .a a:hover {
+            color: #3e332b;
+        }
+        /* footer */
+        .footer-note {
+            margin-top: 3rem;
+            padding: 1.2rem 0 0.8rem;
+            font-size: 0.85rem;
+            color: #7f7264;
+            border-top: 1px solid #ece3d8;
+            text-align: center;
+        }
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .top-nav {
+                padding: 1rem 1.2rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6rem;
+            }
+            .top-nav .nav-links {
+                gap: 1.2rem;
+                flex-wrap: wrap;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .content {
+                padding: 1.5rem 1.2rem 2rem;
+            }
+            .scenes {
+                flex-direction: column;
+            }
+            .scene-card {
+                flex: 1 1 auto;
+            }
+            .highlight-box {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem 1.8rem;
+            }
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 顶部导航 -->
+        <nav class="top-nav">
+            <div class="site-id">
+                ⚽ <span>Wager</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">场景</a>
+                <a href="#">说明</a>
+            </div>
+        </nav>
+
+        <!-- hero -->
+        <div class="hero">
+            <h1>足球投注 · 一眼看懂</h1>
+            <div class="sub">想快速了解网站是做什么的？这里用最直接的方式告诉你——</div>
+            <div class="tagline">⚡ 轻量 · 聚焦 · 无绕弯</div>
+        </div>
+
+        <!-- 主要内容 -->
+        <div class="content">
+            <div class="intro-text">
+                <p>
+                    <strong>Web Football Wager</strong> 是一个围绕 <a href="https://web-footballwager.com">足球投注</a> 提供信息整合与基础指引的站点。如果你刚接触这个词，或者想快速确认这个网站能不能帮到你，下面几个模块就是最直接的答案。
+                </p>
+                <p>
+                    很多用户第一眼就想知道：这网站到底是卖课程的、推荐平台的、还是资讯站？都不是。这里只做一件事——围绕足球投注本身，整理出清晰的逻辑、常见模式以及让你能快速上手的背景说明。没有复杂的营销话术，只有平实的梳理。
+                </p>
+            </div>
+
+            <!-- 引用块/提示框 -->
+            <div class="highlight-box">
+                <strong>🧭 快速定位</strong> · 如果你只想确认“足球投注”四个字对应的网站是不是你要找的，可以直接看下面的场景模块。每个场景都来自真实用户的第一反应。
+            </div>
+
+            <!-- 三个场景模块 -->
+            <div class="scenes">
+                <div class="scene-card">
+                    <span class="emoji-marker">🔍</span>
+                    <h3>信息查证</h3>
+                    <p>想确认足球投注的基本规则、常见术语或流程？这里以条目式说明帮你理清，不需要在多个页面之间跳转。</p>
+                </div>
+                <div class="scene-card">
+                    <span class="emoji-marker">🧩</span>
+                    <h3>模式对比</h3>
+                    <p>不同赛事、不同玩法背后的逻辑是什么？我们拆解成可对比的模块，方便你建立自己的判断框架。</p>
+                </div>
+                <div class="scene-card">
+                    <span class="emoji-marker">📋</span>
+                    <h3>常见疑问</h3>
+                    <p>新手最常问的十个问题，以及对应的简洁解答。不用翻论坛，直接看整理好的版本。</p>
+                </div>
+            </div>
+
+            <!-- 常见说明 (FAQ 摘要) -->
+            <div class="faq-summary">
+                <h2>📌 常见说明摘要</h2>
+                <div class="faq-item">
+                    <span class="q">问：这个网站会推荐具体平台吗？</span>
+                    <div class="a">不会。网站聚焦于介绍足球投注本身的概念、类型和注意事项，不涉及任何第三方推荐或跳转。</div>
+                </div>
+                <div class="faq-item">
+                    <span class="q">问：内容适合完全没接触过的人吗？</span>
+                    <div class="a">适合。我们从最基础的区分开始写，用生活化的语言代替术语堆砌。如果有必要，也会给出进一步阅读的提示。</div>
+                </div>
+                <div class="faq-item">
+                    <span class="q">问：我想直接看关于足球投注的核心说明，从哪里开始？</span>
+                    <div class="a">首页就是起点。每个模块都可以独立阅读。你也可以直接访问 <a href="https://web-footballwager.com">足球投注</a> 这个页面，那里是信息的集中整理。</div>
+                </div>
+                <div class="faq-item">
+                    <span class="q">问：内容会更新吗？</span>
+                    <div class="a">会根据常见疑问和足球投注领域的基础变化做定期调整，保持信息不过时。</div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="footer-note">
+                Web Football Wager · 以清晰的方式理解足球投注
+            </div>
+        </div>
+    </div>
+</body>
+</html>
